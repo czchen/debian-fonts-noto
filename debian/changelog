@@ -1,7 +1,7 @@
-noto (20130411-1) unstable; urgency=low
+noto (2013-04-11-1) unstable; urgency=low
 
   * Initial Release.
     Closes: bug#712422.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 16 Jun 2013 13:37:11 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 16 Jun 2013 17:44:09 +0530
 
