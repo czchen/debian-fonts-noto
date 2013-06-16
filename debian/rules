@@ -17,4 +17,4 @@ DEB_UPSTREAM_TARBALL_EXTENSION = tgz
 DEB_DH_INSTALL_ARGS_$(package) = fonts/individual/hinted/*.ttf /usr/share/fonts/truetype/Noto/
 
 binary-fixup/$(package)::
-	chmod -x fonts/individual/hinted/*.ttf
+	chmod -x debian/$(package)/usr/share/fonts/truetype/Noto/*.ttf
