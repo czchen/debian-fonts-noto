@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/utils.mk
+include /usr/share/cdbs/1/rules/upstream-tarball.mk
+
+DEB_UPSTREAM_URL = https://noto.googlecode.com/files
+DEB_UPSTREAM_TARBALL_MD5 = 9a8517a27cdbeb0dfb51559f0e2aa3ca
+
+upstream_version = 2013-04-11
+DEB_UPSTREAM_PACKAGE = NotoFonts-hinted
+DEB_UPSTREAM_TARBALL_BASENAME = ${DEB_UPSTREAM_PACKAGE}-${upstream_version}
+DEB_UPSTREAM_TARBALL_EXTENSION = tgz
+
