@@ -1,4 +1,4 @@
-noto (2013-04-11-1) unstable; urgency=low
+fonts-noto (2013-04-11-1) unstable; urgency=low
 
   * Initial Release.
     Closes: bug#712422.

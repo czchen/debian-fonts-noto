@@ -1,4 +1,4 @@
-Source: noto
+Source: fonts-noto
 Priority: optional
 Section: fonts
 Build-Depends: @cdbs@
