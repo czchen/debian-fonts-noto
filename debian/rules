@@ -14,5 +14,5 @@ DEB_UPSTREAM_TARBALL_EXTENSION = tgz
 # disable the dh-buildinfo dependency
 CDBS_BUILD_DEPENDS_rules_debhelper_buildinfo = 
 
-binary-fixup/$(package)::
-	chmod -x debian/$(package)/usr/share/fonts/truetype/Noto/*.ttf
+binary-fixup/fonts-noto::
+	chmod -x debian/fonts-noto/usr/share/fonts/truetype/Noto/*.ttf
