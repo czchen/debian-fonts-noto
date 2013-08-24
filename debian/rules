@@ -1,10 +1,8 @@
 #!/usr/bin/make -f
 
 include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/utils.mk
 include /usr/share/cdbs/1/rules/upstream-tarball.mk
 
-package = fonts-noto
 
 DEB_UPSTREAM_URL = https://noto.googlecode.com/files
 DEB_UPSTREAM_TARBALL_MD5 = 9a8517a27cdbeb0dfb51559f0e2aa3ca
@@ -13,7 +11,8 @@ DEB_UPSTREAM_PACKAGE = NotoFonts-hinted
 DEB_UPSTREAM_TARBALL_BASENAME = ${DEB_UPSTREAM_PACKAGE}-${DEB_UPSTREAM_VERSION}
 DEB_UPSTREAM_TARBALL_EXTENSION = tgz
 
-DEB_DH_INSTALL_ARGS_$(package) = fonts/individual/hinted/*.ttf /usr/share/fonts/truetype/Noto/
+# disable the dh-buildinfo dependency
+CDBS_BUILD_DEPENDS_rules_debhelper_buildinfo = 
 
 binary-fixup/$(package)::
 	chmod -x debian/$(package)/usr/share/fonts/truetype/Noto/*.ttf
