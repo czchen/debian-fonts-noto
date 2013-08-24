@@ -18,7 +18,7 @@ Description: "No Tofu" font family for over 30 scripts
  all Unicode ranges. Currently it covers over 30 different script and
  more will be added in future.
  .
- When there is no font to display a piece of text we see square boxes
- on screen which is referred as tofu, this font aims to have "No tofu"
- on the screen and hence its named as Noto.
+ When there is no font to display a piece of text, square boxes on
+ screen which is referred as tofu, this font aims to have "No tofu" on
+ the screen and hence its named as Noto.
 
