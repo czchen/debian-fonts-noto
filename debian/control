@@ -1,10 +1,8 @@
-Source: noto
+Source: fonts-noto
 Priority: optional
 Section: fonts
 Build-Depends: cdbs,
- debhelper (>= 9~),
- dh-buildinfo,
- devscripts
+ debhelper (>= 9~)
 Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
 Uploaders: Vasudev Kamath <kamathvasudev@gmail.com>
 Standards-Version: 3.9.4
