@@ -3,7 +3,8 @@ Priority: optional
 Section: fonts
 Build-Depends: @cdbs@
 Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
-Uploaders: Vasudev Kamath <kamathvasudev@gmail.com>
+Uploaders: Jonas Smedegaard <dr@jones.dk>,
+ Vasudev Kamath <kamathvasudev@gmail.com>
 Standards-Version: 3.9.4
 Homepage: https://code.google.com/p/noto/
 Vcs-Git: git://anonscm.debian.org/pkg-fonts/noto.git
