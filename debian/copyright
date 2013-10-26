@@ -1,5 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Noto
+Upstream-Contact: https://code.google.com/p/noto/issues/list
+ http://groups.google.com/group/noto-font
 Source: https://code.google.com/p/noto/downloads/
 
 Files: *
