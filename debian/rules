@@ -2,6 +2,7 @@
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/upstream-tarball.mk
+include /usr/share/cdbs/1/rules/utils.mk
 
 
 DEB_UPSTREAM_URL = https://noto.googlecode.com/files
@@ -13,3 +14,6 @@ DEB_UPSTREAM_TARBALL_EXTENSION = tgz
 
 binary-fixup/fonts-noto::
 	chmod -x debian/fonts-noto/usr/share/fonts/truetype/Noto/*.ttf
+
+# Ignore fonts which generate binary copyright information
+DEB_COPYRIGHT_CHECK_IGNORE_REGEX = (NotoSansEthiopic-Bold.ttf|NotoSansTamil-Bold.ttf|NotoSerif-Italic.ttf|NotoSansDevanagari.ttf|NotoSans-Bold.ttf|NotoSansDevanagariUI-Regular.ttf|NotoSansUI-Bold.ttf|NotoSerif-BoldItalic.ttf|NotoSansDevanagari-Regular.ttf|debian/(changelog|copyright(|_hints|_newhints)))
