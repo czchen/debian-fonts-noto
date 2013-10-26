@@ -20,8 +20,8 @@ DEB_COPYRIGHT_CHECK_IGNORE_REGEX = (NotoSansEthiopic-Bold.ttf|NotoSansTamil-Bold
 
 # resolve font facts for package description
 CDBS_BUILD_DEPENDS +=, lcdf-typetools
-fonts-scriptcount := $(shell otfinfo -s fonts/individual/hinted/* | perl -pe 's/^.*\t+//' | sort -u | grep -c .)
-fonts-familylist := $(shell otfinfo -a fonts/individual/hinted/* | cut -d: -f2 | sort -u | perl -0 -F/\\n/ -ane 'print " * ", join("\$${Newline} * ",@F)')
+fonts-scriptcount := $(shell otfinfo -s fonts/individual/hinted/*.ttf | perl -pe 's/^.*\t+//' | sort -u | grep -c .)
+fonts-familylist := $(shell otfinfo -a fonts/individual/hinted/*.ttf | cut -d: -f2 | sort -u | perl -0 -F/\\n/ -ane 'print " * ", join("\$${Newline} * ",@F)')
 $(patsubst %,install/%,$(DEB_ALL_PACKAGES)) :: install/%:
 	echo 'fonts:scriptcount=$(fonts-scriptcount)' >> debian/$(cdbs_curpkg).substvars
 	echo 'fonts:familylist=$(fonts-familylist)' >> debian/$(cdbs_curpkg).substvars
