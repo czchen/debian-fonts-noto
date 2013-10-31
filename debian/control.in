@@ -7,8 +7,8 @@ Uploaders: Jonas Smedegaard <dr@jones.dk>,
  Vasudev Kamath <kamathvasudev@gmail.com>
 Standards-Version: 3.9.4
 Homepage: https://code.google.com/p/noto/
-Vcs-Git: git://anonscm.debian.org/pkg-fonts/noto.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-fonts/noto.git
+Vcs-Git: git://anonscm.debian.org/pkg-fonts/fonts-noto.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-fonts/fonts-noto.git
 
 Package: fonts-noto
 Architecture: all
