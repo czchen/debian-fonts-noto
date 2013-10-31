@@ -4,6 +4,7 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/upstream-tarball.mk
 include /usr/share/cdbs/1/rules/utils.mk
 
+pkg = $(DEB_SOURCE_PACKAGE)
 
 DEB_UPSTREAM_URL = https://noto.googlecode.com/files
 DEB_UPSTREAM_TARBALL_MD5 = 9a8517a27cdbeb0dfb51559f0e2aa3ca
@@ -12,7 +13,7 @@ DEB_UPSTREAM_PACKAGE = NotoFonts-hinted
 DEB_UPSTREAM_TARBALL_BASENAME = ${DEB_UPSTREAM_PACKAGE}-${DEB_UPSTREAM_VERSION}
 DEB_UPSTREAM_TARBALL_EXTENSION = tgz
 
-binary-fixup/fonts-noto::
+binary-fixup/$(pkg)::
 	chmod -x debian/fonts-noto/usr/share/fonts/truetype/Noto/*.ttf
 
 # Ignore fonts which generate binary copyright information
@@ -22,6 +23,6 @@ DEB_COPYRIGHT_CHECK_IGNORE_REGEX = (NotoSansEthiopic-Bold.ttf|NotoSansTamil-Bold
 CDBS_BUILD_DEPENDS +=, lcdf-typetools
 fonts-scriptcount := $(shell otfinfo -s fonts/individual/hinted/*.ttf | perl -pe 's/^.*\t+//' | sort -u | grep -c .)
 fonts-familylist := $(shell otfinfo -a fonts/individual/hinted/*.ttf | cut -d: -f2 | sort -u | perl -0 -F/\\n/ -ane 'print " * ", join("\$${Newline} * ",@F)')
-$(patsubst %,install/%,$(DEB_ALL_PACKAGES)) :: install/%:
+install/$(pkg)::
 	echo 'fonts:scriptcount=$(fonts-scriptcount)' >> debian/$(cdbs_curpkg).substvars
 	echo 'fonts:familylist=$(fonts-familylist)' >> debian/$(cdbs_curpkg).substvars
