@@ -16,7 +16,7 @@ Multi-Arch: foreign
 Depends: ${misc:Depends}
 Description: "No Tofu" font families with large Unicode coverage
  Noto is a collection of font families, each visually harmonized across
- scripts:
+ scripts.  This package contains the Noto font families with hinting:
  .
  ${fonts:familylist}
  .
