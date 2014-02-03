@@ -16,8 +16,17 @@ DEB_UPSTREAM_TARBALL_EXTENSION = tgz
 binary-fixup/$(pkg)::
 	chmod -x debian/fonts-noto/usr/share/fonts/truetype/Noto/*.ttf
 
-# Ignore fonts which generate binary copyright information
-DEB_COPYRIGHT_CHECK_IGNORE_REGEX = (NotoSansEthiopic-Bold.ttf|NotoSansTamil-Bold.ttf|NotoSerif-Italic.ttf|NotoSansDevanagari.ttf|NotoSans-Bold.ttf|NotoSansDevanagariUI-Regular.ttf|NotoSansUI-Bold.ttf|NotoSerif-BoldItalic.ttf|NotoSansDevanagari-Regular.ttf|debian/(changelog|copyright(|_hints|_newhints)))
+# extract copyright information embedded in fonts, for copyright check
+DEB_COPYRIGHT_CHECK_IGNORE_REGEX = ^(fonts/individual/hinted/.*\.ttf|debian/(changelog|copyright(|_hints|_newhints)))
+debian/stamp-copyright-check: debian/stamp-fonts-copyright
+debian/stamp-fonts-copyright:
+	otfinfo -i fonts/individual/hinted/*.ttf | egrep '(Copyright|Licens)' \
+		| perl -pe 's/^.*:\s+//' | sort -u \
+		> fonts/individual/hinted/copyright.txt
+	touch $@
+clean::
+	rm -f fonts/individual/hinted/copyright.txt
+	rm -f debian/stamp-fonts-copyright
 
 # resolve font facts and encode for control file (see deb-substvars(5) )
 CDBS_BUILD_DEPENDS +=, lcdf-typetools
