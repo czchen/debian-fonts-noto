@@ -5,7 +5,7 @@ Upstream-Contact: https://code.google.com/p/noto/issues/list
 Source: https://code.google.com/p/noto/downloads/
 
 Files: *
-Copyright: 2013, Noto Font Developers <noto-fonts@googlegroups.com>
+Copyright: 2009,2011-2012, Google Corporation
 License: Apache-2.0
 
 Files: debian/*
