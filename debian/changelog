@@ -1,7 +1,7 @@
 fonts-noto (2013-04-11-1) unstable; urgency=low
 
+  [ Vasudev Kamath & Jonas Smedegaard ]
   * Initial Release.
     Closes: bug#712422.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 16 Jun 2013 17:44:09 +0530
-
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 03 Feb 2014 12:34:39 +0100
