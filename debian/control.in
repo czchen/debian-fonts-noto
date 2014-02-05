@@ -24,6 +24,5 @@ Description: "No Tofu" font families with large Unicode coverage
  all living Unicode scripts
  (currently ${fonts:scriptcount} are covered, at least partly).
  .
- Tofu (豆腐) is japanese jargon for the white box character (e.g. �)
- that is often displayed as replacement for an unassigned or unknown
- character.
+ Tofu (豆腐) is japanese jargon for the white box character "�" often
+ displayed as replacement for an unassigned or unknown character.
