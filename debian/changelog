@@ -1,3 +1,14 @@
+fonts-noto (2013-04-11-2) unstable; urgency=medium
+
+  * Adjust long description:
+    + Fix grammar (script amount is plural).
+    + Slightly refine note on tofu character.
+  * Fix use lowercase font dir (for consistency across font packages).
+    Closes: bug#737716. Thanks to Fabian Greffrath.
+  * Add git-buildpackage config, enabling pristine-tar and sighed tags.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 05 Feb 2014 13:51:58 +0100
+
 fonts-noto (2013-04-11-1) unstable; urgency=low
 
   [ Vasudev Kamath & Jonas Smedegaard ]
