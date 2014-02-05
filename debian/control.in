@@ -22,7 +22,7 @@ Description: "No Tofu" font families with large Unicode coverage
  .
  The name "Noto" is short for "No Tofu", describing the aim of covering
  all living Unicode scripts
- (currently ${fonts:scriptcount} is covered, at least partly).
+ (currently ${fonts:scriptcount} are covered, at least partly).
  .
  Tofu (豆腐) is japanese jargon for the white box character (e.g. �)
  that is often displayed as replacement for an unassigned or unknown
